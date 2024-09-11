@@ -15,7 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{553BE5C2-2EC5-4CC8-9581-EDCA6A3C4CF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Domain", "CleanArchitecture.Domain\CleanArchitecture.Domain.csproj", "{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -24,6 +36,7 @@ Global
 		{6CD88381-D1CB-45EB-BE16-633F2BE9C1F8} = {8AFCCBA9-CE21-41CF-A9C9-DF4F55E6F10F}
 		{77515A6A-CC64-49AC-B84A-0532103CB0F0} = {8AFCCBA9-CE21-41CF-A9C9-DF4F55E6F10F}
 		{553BE5C2-2EC5-4CC8-9581-EDCA6A3C4CF0} = {8AFCCBA9-CE21-41CF-A9C9-DF4F55E6F10F}
+		{DDD2DE2A-4A98-485D-9B50-A8CE1B6119AF} = {6CD88381-D1CB-45EB-BE16-633F2BE9C1F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4384F144-DC03-4388-9B76-EA54D344E355}
