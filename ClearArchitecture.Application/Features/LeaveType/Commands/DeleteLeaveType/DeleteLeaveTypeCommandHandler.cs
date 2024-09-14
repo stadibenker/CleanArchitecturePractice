@@ -1,4 +1,5 @@
 ﻿using ClearArchitecture.Application.Contracts.Persistence;
+using ClearArchitecture.Application.Exceptions;
 using MediatR;
 
 namespace ClearArchitecture.Application.Features.LeaveType.Commands.DeleteLeaveType
@@ -15,6 +16,10 @@ namespace ClearArchitecture.Application.Features.LeaveType.Commands.DeleteLeaveT
 		public async Task<Unit> Handle(DeleteLeaveTypeCommand request, CancellationToken cancellationToken)
 		{
 			var leaveTypeToDelete = await _repository.GetByIdAsync(request.Id);
+
+			if (leaveTypeToDelete == null) {
+				throw new NotFoundException(nameof(CleanArchitecture.Domain.LeaveType), request.Id);
+			}
 
 			await _repository.DeleteAsync(leaveTypeToDelete);
 

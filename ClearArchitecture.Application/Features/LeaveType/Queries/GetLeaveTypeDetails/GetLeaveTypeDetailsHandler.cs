@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ClearArchitecture.Application.Contracts.Persistence;
+using ClearArchitecture.Application.Exceptions;
 using MediatR;
 
 namespace ClearArchitecture.Application.Features.LeaveType.Queries.GetLeaveTypeDetails
@@ -18,6 +19,11 @@ namespace ClearArchitecture.Application.Features.LeaveType.Queries.GetLeaveTypeD
 		public async Task<LeaveTypeDetailsDto> Handle(GetLeaveTypeDetailsQuery request, CancellationToken cancellationToken)
 		{
 			var leaveType = await _repository.GetByIdAsync(request.Id);
+
+			if (leaveType == null)
+			{
+				throw new NotFoundException(nameof(CleanArchitecture.Domain.LeaveType), request.Id);
+			}
 
 			var data = _mapper.Map<LeaveTypeDetailsDto>(leaveType);
 
