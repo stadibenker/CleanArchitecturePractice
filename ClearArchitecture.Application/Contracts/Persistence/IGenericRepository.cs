@@ -1,12 +1,14 @@
-﻿namespace ClearArchitecture.Application.Contracts.Persistence
+﻿using CleanArchitecture.Domain.Common;
+
+namespace ClearArchitecture.Application.Contracts.Persistence
 {
 	// Very generic interface. For every table in database.
-	public interface IGenericRepository<T> where T : class
+	public interface IGenericRepository<T> where T : BaseEntity
 	{
-		Task<ICollection<T>> GetAsync();
+		Task<IReadOnlyList<T>> GetAsync();
 		Task<T> GetByIdAsync(int id);
 		Task<T> CreateAsync(T entity);
-		Task<T> UpdateAsync(T entity);
+		Task<int> UpdateAsync(T entity);
 		Task DeleteAsync(T entity);
 	}
 }
