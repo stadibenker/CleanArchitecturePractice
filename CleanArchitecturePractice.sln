@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearArchitecture.Application", "ClearArchitecture.Application\ClearArchitecture.Application.csproj", "{7448844C-563E-4E51-B4DF-2BA81F8F7870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Persistance", "CleanArchitecture.Persistance\CleanArchitecture.Persistance.csproj", "{6CA3A28D-8B3F-4829-812D-0408E754F969}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Persistence", "CleanArchitecture.Persistance\CleanArchitecture.Persistence.csproj", "{6CA3A28D-8B3F-4829-812D-0408E754F969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
