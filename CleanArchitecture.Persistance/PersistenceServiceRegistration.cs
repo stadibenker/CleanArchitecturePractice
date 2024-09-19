@@ -11,8 +11,8 @@ namespace CleanArchitecture.Persistence
 	{
 		public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration config)
 		{
-			services.AddDbContext<HrDbContext>(opt => {
-				opt.UseSqlServer(config.GetConnectionString("HrDbConnectionString"));
+			services.AddDbContext<HrDbContext>(options => {
+				options.UseSqlServer(config.GetConnectionString("HrDbConnectionString"));
 			});
 
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
