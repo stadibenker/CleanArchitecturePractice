@@ -17,6 +17,8 @@ namespace CleanArchitecture.Persistence.DatabaseContext
 		public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
 		public DbSet<LeaveRequest> LeaveRequests { get; set; }
 
+		public DbSet<LeaveAllocation> Users { get; set; }
+
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(HrDbContext).Assembly);
