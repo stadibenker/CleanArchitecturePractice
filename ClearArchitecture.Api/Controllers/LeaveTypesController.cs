@@ -38,9 +38,13 @@ namespace ClearArchitecture.Api.Controllers
 		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public async Task<ActionResult> Post(CreateLeaveTypeCommand leaveType)
+		public async Task<ActionResult> Post(CreateLeaveTypeDto leaveType)
 		{
-			var response = await _mediator.Send(leaveType);
+			var response = await _mediator.Send(new CreateLeaveTypeCommand
+			{
+				Name = leaveType.Name,
+				DefaultDays = leaveType.DefaultDays,
+			});
 			return CreatedAtAction(nameof(Get), new { id = response });
 		}
 
@@ -48,9 +52,14 @@ namespace ClearArchitecture.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public async Task<ActionResult> Put(UpdateLeaveTypeCommand leaveType)
+		public async Task<ActionResult> Put(int id, UpdateLeaveTypeDto leaveType)
 		{
-			await _mediator.Send(leaveType);
+			await _mediator.Send(new UpdateLeaveTypeCommand
+			{
+				Id = id,
+				Name = leaveType.Name,
+				DefaultDays = leaveType.DefaultDays
+			});
 			return NoContent();
 		}
 
