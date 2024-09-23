@@ -26,7 +26,7 @@ namespace ClearArchitecture.Application.Features.LeaveType.Commands.CreateLeaveT
 			var validator = new CreateLeaveTypeCommandValidator(_repository);
 			var validationResult = await validator.ValidateAsync(request);
 
-			if (!validationResult.Errors.Any()) {
+			if (validationResult.Errors.Any()) {
 				_logger.LogWarning("Validation errors in create request for {0} - {1}", nameof(LeaveType), request.Name);
 				throw new BadRequestException("Invalid LeaveType ", validationResult);
 			}

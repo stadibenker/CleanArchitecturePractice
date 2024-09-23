@@ -11,10 +11,9 @@ namespace ClearArchitecture.Application.Exceptions
 
 		public BadRequestException(string message, ValidationResult validationResult) : base(message)
 		{
-			ValidationErrors = new List<string>();
-			validationResult.Errors.ForEach(x => ValidationErrors.Add(x.ErrorMessage));
+			ValidationErrors = validationResult.ToDictionary();
 		}
 
-		public List<string> ValidationErrors {  get; set; }
+		public IDictionary<string, string[]> ValidationErrors {  get; set; }
 	}
 }
