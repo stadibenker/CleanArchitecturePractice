@@ -23,8 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\LeaveTypes\" />
-    <Folder Include="Moks\" />
+    <ProjectReference Include="..\ClearArchitecture.Application\ClearArchitecture.Application.csproj" />
   </ItemGroup>
 
 </Project>

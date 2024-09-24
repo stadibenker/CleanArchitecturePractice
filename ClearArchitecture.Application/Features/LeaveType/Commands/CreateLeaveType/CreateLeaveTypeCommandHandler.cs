@@ -11,10 +11,10 @@ namespace ClearArchitecture.Application.Features.LeaveType.Commands.CreateLeaveT
 	{
 		private readonly IMapper _mapper;
 		private readonly ILeaveTypeRepository _repository;
-		private readonly IAppLogger<GetLeaveTypesHandler> _logger;
+		private readonly IAppLogger<CreateLeaveTypeCommandHandler> _logger;
 
 
-		public CreateLeaveTypeCommandHandler(IMapper mapper ,ILeaveTypeRepository repository, IAppLogger<GetLeaveTypesHandler> logger)
+		public CreateLeaveTypeCommandHandler(IMapper mapper ,ILeaveTypeRepository repository, IAppLogger<CreateLeaveTypeCommandHandler> logger)
 		{
 			_mapper = mapper;
 			_repository = repository;
