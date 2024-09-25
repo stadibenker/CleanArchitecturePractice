@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearArchitecture.UnitTests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.IntegrationTests", "CleanArchitecture.IntegrationTests\CleanArchitecture.IntegrationTests.csproj", "{88FB19A4-CF89-44EF-BD0F-A4FE5A59D7E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.BlazorUI", "CleanArchitecture.BlazorUI\CleanArchitecture.BlazorUI.csproj", "{9E975329-A3FD-4931-ABFC-97664234862B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{88FB19A4-CF89-44EF-BD0F-A4FE5A59D7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88FB19A4-CF89-44EF-BD0F-A4FE5A59D7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88FB19A4-CF89-44EF-BD0F-A4FE5A59D7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E975329-A3FD-4931-ABFC-97664234862B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E975329-A3FD-4931-ABFC-97664234862B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E975329-A3FD-4931-ABFC-97664234862B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E975329-A3FD-4931-ABFC-97664234862B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{C2C97E94-1696-4EDF-8ABB-D10B968B7857} = {553BE5C2-2EC5-4CC8-9581-EDCA6A3C4CF0}
 		{166803EC-DF98-4774-A096-6AA39FE58A29} = {6895B533-C1C1-4FA4-A6A3-A3366F49503E}
 		{88FB19A4-CF89-44EF-BD0F-A4FE5A59D7E3} = {6895B533-C1C1-4FA4-A6A3-A3366F49503E}
+		{9E975329-A3FD-4931-ABFC-97664234862B} = {0957E471-0950-41ED-9B01-7EF89E5FEA51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4384F144-DC03-4388-9B76-EA54D344E355}
