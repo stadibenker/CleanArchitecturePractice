@@ -10,6 +10,7 @@ namespace CleanArchitecture.BlazorUI.MappingProfiles
 		{
 			CreateMap<LeaveTypeDto, LeaveTypeVM>().ReverseMap();
 			CreateMap<CreateLeaveTypeDto, LeaveTypeVM>().ReverseMap();
+			CreateMap<UpdateLeaveTypeDto, LeaveTypeVM>().ReverseMap();
 		}
 	}
 }

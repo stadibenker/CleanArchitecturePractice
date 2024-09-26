@@ -16,9 +16,8 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
 	options.AddPolicy("all", builder => builder.AllowAnyOrigin()
-		.AllowAnyHeader()
-		.AllowAnyMethod()
-	);
+	.AllowAnyHeader()
+	.AllowAnyMethod());
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -36,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("all");
 
 app.UseAuthorization();
 
