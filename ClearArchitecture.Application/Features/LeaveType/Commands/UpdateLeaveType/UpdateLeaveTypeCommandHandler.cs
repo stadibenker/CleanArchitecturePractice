@@ -17,6 +17,9 @@ namespace ClearArchitecture.Application.Features.LeaveType.Commands.UpdateLeaveT
 
 		public async Task<Unit> Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken)
 		{
+			var validator = new UpdateLeaveTypeCommandValidator(_repository);
+			var validationResult = await validator.ValidateAsync(request);
+
 			var leaveTypeToUpdate = _mapper.Map<CleanArchitecture.Domain.LeaveType>(request);
 
 			await _repository.UpdateAsync(leaveTypeToUpdate);
