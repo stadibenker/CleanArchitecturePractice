@@ -4,7 +4,6 @@ using CleanArchitecture.BlazorUI.Contracts;
 using CleanArchitecture.BlazorUI.Providers;
 using CleanArchitecture.BlazorUI.Services;
 using CleanArchitecture.BlazorUI.Services.Base;
-using HR.LeaveManagement.BlazorUI.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

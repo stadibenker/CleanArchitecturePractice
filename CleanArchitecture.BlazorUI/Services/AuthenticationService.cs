@@ -4,7 +4,7 @@ using CleanArchitecture.BlazorUI.Providers;
 using CleanArchitecture.BlazorUI.Services.Base;
 using Microsoft.AspNetCore.Components.Authorization;
 
-namespace HR.LeaveManagement.BlazorUI.Services
+namespace CleanArchitecture.BlazorUI.Services
 {
 	public class AuthenticationService : BaseHttpService, IAuthenticationService
 	{
@@ -25,7 +25,6 @@ namespace HR.LeaveManagement.BlazorUI.Services
 				{
 					await _localStorage.SetItemAsync("token", authenticationResponse.Token);
 
-					// Set claims in Blazor and login state
 					await ((ApiAuthenticationStateProvider)_authenticationStateProvider).LoggedIn();
 					return true;
 				}
